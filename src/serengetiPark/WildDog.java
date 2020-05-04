@@ -1,6 +1,17 @@
 package serengetiPark;
 
+/**
+ * Represents a WildDog object on the Serengeti Park.
+ *
+ * @version Project - Part 2
+ * @author Iyán Álvarez
+ */
 public class WildDog extends Carnivorous implements ExtintionDanger {
+
+    // Attributes
+    private final String WILDDOG_SOUND = "Grrrrr wooof wooof";
+    private final String WILDDOG_WALK = "Light walk";
+    // TODO Walk Mammal
 
     // Constructors
     /**
@@ -15,6 +26,24 @@ public class WildDog extends Carnivorous implements ExtintionDanger {
     }
 
     // Methods
+    /**
+     * Returns the sound of WildDog specimens.
+     * @return sound of WildDog specimens.
+     */
+    @Override public String sound() {
+        return WILDDOG_SOUND;
+    }
+    /**
+     * Returns the walk of WildDog specimens.
+     * @return walk of WildDog specimens.
+     */
+    @Override public String walk() {
+        return WILDDOG_WALK;
+    }
+    /**
+     * Returns the danger level of WildDog specimens.
+     * @return walk of WildDog specimens.
+     */
     @Override public double whatDangerLevel() {
         return WILDDOG_DANGER_LEVEL;
     }

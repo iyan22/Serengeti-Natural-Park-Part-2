@@ -2,6 +2,10 @@ package serengetiPark;
 
 public abstract class Reptile extends Specimen {
 
+    // Attributes
+    private final String REPTILE_FEEDING = "Little animals and insects";
+    private final String REPTILE_SOUND = "Sssssiiigghh sssiiiighh";
+
     // Constructors
     /**
      * This constructor, creates a Reptile object with the given attributes/values.
@@ -14,5 +18,13 @@ public abstract class Reptile extends Specimen {
         super(name, initialGPS);
     }
 
-    
+    // Methods
+    /**
+     * Returns the feeding of Reptile specimens.
+     * @return feeding of Reptile specimens.
+     */
+    @Override public String feeding() {
+        return REPTILE_FEEDING;
+    }
+
 }

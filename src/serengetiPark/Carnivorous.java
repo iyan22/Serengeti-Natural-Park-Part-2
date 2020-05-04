@@ -1,6 +1,9 @@
 package serengetiPark;
 
-public class Carnivorous extends Mammal {
+public abstract class Carnivorous extends Mammal {
+
+    // Attributes
+    private final String CARNIVOROUS_FEEDING = "Other animals";
 
     // Constructors
     /**
@@ -13,4 +16,14 @@ public class Carnivorous extends Mammal {
     public Carnivorous(String name, GPS initialGPS) {
         super(name, initialGPS);
     }
+
+    // Methods
+    /**
+     * Returns the feeding of Carnivorous specimens.
+     * @return feeding of Carnivorous specimens.
+     */
+    public String feeding() {
+        return CARNIVOROUS_FEEDING;
+    }
+
 }

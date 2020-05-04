@@ -1,6 +1,16 @@
 package serengetiPark;
 
+/**
+ * Represents a Mammal object on the Serengeti Park.
+ *
+ * @version Project - Part 2
+ * @author Iyán Álvarez
+ */
 public abstract class Mammal extends Specimen {
+
+    // Attributes
+    private final String MAMMAL_WALK = "Slow walk";
+    // TODO Walk Mammal
 
     // Constructors
     /**
@@ -12,6 +22,15 @@ public abstract class Mammal extends Specimen {
      */
     public Mammal(String name, GPS initialGPS) {
         super(name, initialGPS);
+    }
+
+    // Methods
+    /**
+     * Returns the walk of Mammal specimens.
+     * @return walk of Mammal specimens.
+     */
+    @Override public String walk() {
+        return MAMMAL_WALK;
     }
 
 }

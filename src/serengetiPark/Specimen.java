@@ -53,6 +53,10 @@ public abstract class Specimen {
     }
 
     // Methods
+    public abstract String feeding();
+    public abstract String sound();
+    public abstract String walk();
+
     /**
      * Obtains the kilometres that the Specimen has travelled in its day route.
      * @return The kilometres travelled by the Specimen this day.
@@ -96,5 +100,6 @@ public abstract class Specimen {
     @Override public String toString() {
         return name + " " + lastLocation().toString();
     }
+
 
 }

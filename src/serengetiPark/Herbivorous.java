@@ -1,6 +1,15 @@
 package serengetiPark;
 
-public class Herbivorous extends Mammal {
+/**
+ * Represents a Herbivorous object on the Serengeti Park.
+ *
+ * @version Project - Part 2
+ * @author Iyán Álvarez
+ */
+public abstract class Herbivorous extends Mammal {
+
+    // Attributes
+    private final String HERBIVOROUS_FEEDING = "Plants, grasses and herbs";
 
     // Constructors
     /**
@@ -12,6 +21,15 @@ public class Herbivorous extends Mammal {
      */
     public Herbivorous(String name, GPS initialGPS) {
         super(name, initialGPS);
+    }
+
+    // Methods
+    /**
+     * Returns the feeding of Herbivorous specimens.
+     * @return feeding of Herbivorous specimens.
+     */
+    public String feeding() {
+        return HERBIVOROUS_FEEDING;
     }
 
 
