@@ -1,4 +1,4 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 /**
  * Represents a Herbivorous object on the Serengeti Park.
@@ -9,7 +9,7 @@ package serengetiPark;
 public abstract class Herbivorous extends Mammal {
 
     // Attributes
-    private final String HERBIVOROUS_FEEDING = "Plants, grasses and herbs";
+    public static final String HERBIVOROUS_FEEDING = "Plants, grasses and herbs";
 
     // Constructors
     /**
@@ -30,6 +30,13 @@ public abstract class Herbivorous extends Mammal {
      */
     public String feeding() {
         return HERBIVOROUS_FEEDING;
+    }
+    /**
+     * Returns the inheritance path of a Herbivorous.
+     * @return inheritance path of a Herbivorous.
+     */
+    @Override public String inheritancePath() {
+        return "Herbivorous" + " < " + super.inheritancePath();
     }
 
 

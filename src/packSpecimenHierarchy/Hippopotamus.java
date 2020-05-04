@@ -1,4 +1,4 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 /**
  * Represents a Hipopotamus object on the Serengeti Park.
@@ -6,11 +6,11 @@ package serengetiPark;
  * @version Project - Part 2
  * @author Iyán Álvarez
  */
-public class Hipopotamus extends Herbivorous {
+public class Hippopotamus extends Herbivorous {
 
     // Attributes
-    private final String HIPOPOTAMUS_SOUND = "Ouuuuughtttt ouught";
-    private final String HIPOPOTAMUS_WALK = "Slow walk";
+    public static final String HIPOPOTAMUS_SOUND = "Whinny whinny";
+    // private final String HIPOPOTAMUS_WALK = "Slow walk";
     // TODO Walk Mammal
 
     // Constructors
@@ -21,7 +21,7 @@ public class Hipopotamus extends Herbivorous {
      * @param name       Name of the Hipopotamus.
      * @param initialGPS Initial GPS location of the Hipopotamus.
      */
-    public Hipopotamus(String name, GPS initialGPS) {
+    public Hippopotamus(String name, GPS initialGPS) {
         super(name, initialGPS);
     }
 
@@ -36,9 +36,16 @@ public class Hipopotamus extends Herbivorous {
     /**
      * Returns the walk of Hipopotamus specimens.
      * @return walk of Hipopotamus specimens.
-     */
+     *
     @Override public String walk() {
         return HIPOPOTAMUS_WALK;
     }
-
+    */
+    /**
+     * Returns the inheritance path of a Hippopotamus.
+     * @return inheritance path of a Hippopotamus.
+     */
+    @Override public String inheritancePath() {
+        return "Hippopotamus" + " < " + super.inheritancePath();
+    }
 }

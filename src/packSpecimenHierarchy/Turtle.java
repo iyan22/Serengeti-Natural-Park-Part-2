@@ -1,4 +1,4 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 /**
  * Represents a Turtle object on the Serengeti Park.

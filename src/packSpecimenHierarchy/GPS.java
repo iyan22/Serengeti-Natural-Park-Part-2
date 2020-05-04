@@ -1,4 +1,4 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 /**
  * Represents a GPS object.

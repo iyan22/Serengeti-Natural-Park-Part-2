@@ -1,9 +1,9 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 public abstract class Carnivorous extends Mammal {
 
     // Attributes
-    private final String CARNIVOROUS_FEEDING = "Other animals";
+    public static final String CARNIVOROUS_FEEDING = "Other animals";
 
     // Constructors
     /**
@@ -25,5 +25,11 @@ public abstract class Carnivorous extends Mammal {
     public String feeding() {
         return CARNIVOROUS_FEEDING;
     }
-
+    /**
+     * Returns the inheritance path of a Carnivorous.
+     * @return inheritance path of a Carnivorous.
+     */
+    @Override public String inheritancePath() {
+        return "Carnivorous" + " < " + super.inheritancePath();
+    }
 }

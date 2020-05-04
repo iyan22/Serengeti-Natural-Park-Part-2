@@ -1,4 +1,4 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 /**
  * Represents a Leopard object on the Serengeti Park.
@@ -7,9 +7,6 @@ package serengetiPark;
  * @author Iyán Álvarez
  */
 public class Leopard extends Feline {
-
-    // Attributes
-    private final String LEOPARD_SOUND = "Roaaarr roaarrr";
 
     // Constructors
     /**
@@ -25,10 +22,10 @@ public class Leopard extends Feline {
 
     // Methods
     /**
-     * Returns the sound of Leopard specimens.
-     * @return sound of Leopard specimens.
+     * Returns the inheritance path of a Feline.
+     * @return inheritance path of a Feline.
      */
-    @Override public String sound() {
-        return LEOPARD_SOUND;
+    @Override public String inheritancePath() {
+        return "Leopard" + " < " + super.inheritancePath();
     }
 }

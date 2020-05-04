@@ -1,4 +1,4 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 public abstract class Reptile extends Specimen {
 
@@ -26,5 +26,18 @@ public abstract class Reptile extends Specimen {
     @Override public String feeding() {
         return REPTILE_FEEDING;
     }
-
+    /**
+     * Returns the sound of Reptile specimens.
+     * @return sound of Reptile specimens.
+     */
+    @Override public String sound() {
+        return REPTILE_SOUND;
+    }
+    /**
+     * Returns the inheritance path of a Reptile.
+     * @return inheritance path of a Reptile.
+     */
+    @Override public String inheritancePath() {
+        return "Reptile" + " < " + super.inheritancePath();
+    }
 }

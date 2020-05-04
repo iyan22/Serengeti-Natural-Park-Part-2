@@ -1,4 +1,4 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 /**
  * Represents a BlackRhino object on the Serengeti Park.
@@ -6,10 +6,10 @@ package serengetiPark;
  * @version Project - Part 2
  * @author Iyán Álvarez
  */
-public class BlackRhino extends Herbivorous implements ExtintionDanger {
+public class BlackRhino extends Herbivorous implements ExtinctionDanger {
 
     // Attributes
-    private final String BLACKRHINO_SOUND = "Whinny whinny";
+    public static final String BLACKRHINO_SOUND = "Whinny whinny";
     // TODO Walk Mammal
 
     // Constructors
@@ -38,6 +38,13 @@ public class BlackRhino extends Herbivorous implements ExtintionDanger {
      */
     @Override public double whatDangerLevel() {
         return BLACKRHINO_DANGER_LEVEL;
+    }
+    /**
+     * Returns the inheritance path of a BlackRhino.
+     * @return inheritance path of a BlackRhino.
+     */
+    @Override public String inheritancePath() {
+        return this.getClass().getSimpleName() + " < " + super.inheritancePath();
     }
 
 }

@@ -1,4 +1,4 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 import java.util.ArrayList;
 
@@ -53,9 +53,28 @@ public abstract class Specimen {
     }
 
     // Methods
+    /**
+     * Returns the feeding of a specific specimen.
+     * @return feeding of a specific specimen.
+     */
     public abstract String feeding();
+    /**
+     * Returns the sound of a specific specimen.
+     * @return sound of a specific specimen.
+     */
     public abstract String sound();
+    /**
+     * Returns the walk of a specific specimen.
+     * @return walk of a specific specimen.
+     */
     public abstract String walk();
+    /**
+     * Returns the inheritance path of a Specimen.
+     * @return inheritance path of a specific specimen.
+     */
+    public String inheritancePath() {
+        return "Specimen";
+    }
 
     /**
      * Obtains the kilometres that the Specimen has travelled in its day route.

@@ -1,6 +1,6 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
-public interface ExtintionDanger {
+public interface ExtinctionDanger {
 
     // Constants
     public static final double BLACKRHINO_DANGER_LEVEL = 2.2;

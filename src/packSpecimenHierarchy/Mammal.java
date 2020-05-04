@@ -1,4 +1,4 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 /**
  * Represents a Mammal object on the Serengeti Park.
@@ -9,7 +9,7 @@ package serengetiPark;
 public abstract class Mammal extends Specimen {
 
     // Attributes
-    private final String MAMMAL_WALK = "Slow walk";
+    public static final String MAMMAL_WALK = "Slow walk";
     // TODO Walk Mammal
 
     // Constructors
@@ -31,6 +31,13 @@ public abstract class Mammal extends Specimen {
      */
     @Override public String walk() {
         return MAMMAL_WALK;
+    }
+    /**
+     * Returns the inheritance path of a Mammal.
+     * @return inheritance path of a Mammal.
+     */
+    @Override public String inheritancePath() {
+        return "Mammal" + " < " + super.inheritancePath();
     }
 
 }

@@ -1,4 +1,4 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 /**
  * Represents a Zebra object on the Serengeti Park.
@@ -9,7 +9,7 @@ package serengetiPark;
 public class Zebra extends Herbivorous {
 
     // Attributes
-    private final String ZEBRA_SOUND = "Hiiiihiiiii hiiiihiii";
+    public static final String ZEBRA_SOUND = "Hiiiihiiiii hiiiihiii";
     // TODO Walk Mammal
 
     // Constructors
@@ -24,6 +24,13 @@ public class Zebra extends Herbivorous {
      */
     @Override public String sound() {
         return ZEBRA_SOUND;
+    }
+    /**
+     * Returns the inheritance path of a Zebra.
+     * @return inheritance path of a Zebra.
+     */
+    @Override public String inheritancePath() {
+        return "Zebra" + " < " + super.inheritancePath();
     }
 
 }

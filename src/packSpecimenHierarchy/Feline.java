@@ -1,9 +1,10 @@
-package serengetiPark;
+package packSpecimenHierarchy;
 
 public abstract class Feline extends Carnivorous {
 
     // Attributes
-    private final String FELINE_WALK = "Stealthy walk";
+    public static final String FELINE_SOUND = "Roaaarr roaarrr";
+    public static final String FELINE_WALK = "Stealthy walk";
 
     // Constructors
     /**
@@ -19,12 +20,24 @@ public abstract class Feline extends Carnivorous {
 
     // Methods
     /**
+     * Returns the sound of Feline specimens.
+     * @return sound of Feline specimens.
+     */
+    @Override public String sound() {
+        return FELINE_SOUND;
+    }
+    /**
      * Returns the walk of Feline specimens.
      * @return walk of Feline specimens.
      */
     @Override public String walk() {
         return FELINE_WALK;
     }
-
-
+    /**
+     * Returns the inheritance path of a Feline.
+     * @return inheritance path of a Feline.
+     */
+    @Override public String inheritancePath() {
+        return "Feline" + " < " + super.inheritancePath();
+    }
 }
