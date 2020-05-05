@@ -26,12 +26,10 @@ public abstract class Mammal extends Specimen {
 
     // Methods
     /**
-     * Returns the walk of Mammal specimens.
-     * @return walk of Mammal specimens.
+     * Returns the walk of a specific mammal.
+     * @return walk of a specific mammal.
      */
-    @Override public String walk() {
-        return MAMMAL_WALK;
-    }
+    public abstract String walk();
     /**
      * Returns the inheritance path of a Mammal.
      * @return inheritance path of a Mammal.

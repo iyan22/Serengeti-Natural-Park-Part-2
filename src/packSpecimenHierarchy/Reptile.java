@@ -1,5 +1,11 @@
 package packSpecimenHierarchy;
 
+/**
+ * Represents a Reptile object on the Serengeti Park.
+ *
+ * @version Project - Part 2
+ * @author Iyán Álvarez
+ */
 public abstract class Reptile extends Specimen {
 
     // Attributes

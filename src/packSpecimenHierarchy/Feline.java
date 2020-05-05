@@ -1,5 +1,11 @@
 package packSpecimenHierarchy;
 
+/**
+ * Represents a Feline object on the Serengeti Park.
+ *
+ * @version Project - Part 2
+ * @author Iyán Álvarez
+ */
 public abstract class Feline extends Carnivorous {
 
     // Attributes
@@ -40,4 +46,5 @@ public abstract class Feline extends Carnivorous {
     @Override public String inheritancePath() {
         return "Feline" + " < " + super.inheritancePath();
     }
+
 }

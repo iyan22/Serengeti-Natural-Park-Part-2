@@ -64,11 +64,6 @@ public abstract class Specimen {
      */
     public abstract String sound();
     /**
-     * Returns the walk of a specific specimen.
-     * @return walk of a specific specimen.
-     */
-    public abstract String walk();
-    /**
      * Returns the inheritance path of a Specimen.
      * @return inheritance path of a specific specimen.
      */

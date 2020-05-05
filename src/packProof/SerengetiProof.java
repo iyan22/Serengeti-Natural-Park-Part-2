@@ -20,8 +20,10 @@ public class SerengetiProof {
             System.out.println(s.getClass().getSimpleName());
             // TODO Falta implementar número de Specimens de cada tipo concreto.
             System.out.println(" - Feeding: " + s.feeding());
-            System.out.println(" - Walk: "    + s.walk());
             System.out.println(" - Sound: "   + s.feeding());
+            if (s instanceof Mammal) {
+                System.out.println(" - Walk: " + ((Mammal) s).walk());
+            }
             if (s instanceof ExtinctionDanger) {
                 System.out.println(" - Danger level: " + ((ExtinctionDanger) s).whatDangerLevel());
             }

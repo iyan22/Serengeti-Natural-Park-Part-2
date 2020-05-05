@@ -32,12 +32,6 @@ class CrocodileTest {
         assertEquals(Crocodile.CROCODILE_SOUND, cr.sound());
     }
 
-    // TODO WALK??
-    @Test @DisplayName("Test of Crocodile walk()")
-    void testWalk() {
-        assertEquals(Mammal.MAMMAL_WALK, cr.walk());
-    }
-
     @Test @DisplayName("Test of Crocodile whatDangerLevel()")
     void whatDangerLevel() {
         assertEquals(ExtinctionDanger.CROCODILE_DANGER_LEVEL, cr.whatDangerLevel());

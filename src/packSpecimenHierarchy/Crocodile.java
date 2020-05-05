@@ -1,5 +1,11 @@
 package packSpecimenHierarchy;
 
+/**
+ * Represents a Crocodile object on the Serengeti Park.
+ *
+ * @version Project - Part 2
+ * @author Iyán Álvarez
+ */
 public class Crocodile extends Reptile implements ExtinctionDanger {
 
     // Attributes
@@ -19,7 +25,6 @@ public class Crocodile extends Reptile implements ExtinctionDanger {
     }
 
     // Methods
-
     /**
      * Returns the feeding of Crocodile specimens.
      * @return feeding of Crocodile specimens.
@@ -34,13 +39,6 @@ public class Crocodile extends Reptile implements ExtinctionDanger {
     @Override public String sound() {
         return CROCODILE_SOUND;
     }
-    // TODO WALKK??
-    @Override public String walk() {
-        return null;
-    }
-
-    // TODO Reptile walk?
-
     /**
      * Returns the danger level of Crocodile specimens.
      * @return walk of Crocodile specimens.
