@@ -8,10 +8,6 @@ package packSpecimenHierarchy;
  */
 public abstract class Mammal extends Specimen {
 
-    // Attributes
-    public static final String MAMMAL_WALK = "Slow walk";
-    // TODO Walk Mammal
-
     // Constructors
     /**
      * This constructor, creates a Mammal object with the given attributes/values.

@@ -7,43 +7,33 @@ import packSpecimenHierarchy.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("Test of BlackRhino class methods")
+@DisplayName("Test of Turtle class methods")
 class TurtleTest {
 
-    static BlackRhino br;
+    static Turtle tu;
 
     @BeforeAll
     static void setUpBeforeAll() {
-        br = new BlackRhino("BlackRhinoExample" , new GPS(0,0));
+        tu = new Turtle("TurtleExample" , new GPS(0,0));
     }
 
-    @Test @DisplayName("Test of BlackRhino getName()")
+    @Test @DisplayName("Test of Turtle getName()")
     void testGetName() {
-        assertEquals("BlackRhinoExample", br.getName());
+        assertEquals("TurtleExample", tu.getName());
     }
 
-    @Test @DisplayName("Test of BlackRhino feeding()")
+    @Test @DisplayName("Test of Turtle feeding()")
     void testFeeding() {
-        assertEquals(Herbivorous.HERBIVOROUS_FEEDING, br.feeding());
+        assertEquals(Reptile.REPTILE_FEEDING, tu.feeding());
     }
 
-    @Test @DisplayName("Test of BlackRhino sound()")
+    @Test @DisplayName("Test of Turtle sound()")
     void testSound() {
-        assertEquals(BlackRhino.BLACKRHINO_SOUND, br.sound());
-    }
-
-    @Test @DisplayName("Test of BlackRhino walk()")
-    void testWalk() {
-        assertEquals(Mammal.MAMMAL_WALK, br.walk());
-    }
-
-    @Test @DisplayName("Test of BlackRhino whatDangerLevel()")
-    void whatDangerLevel() {
-        assertEquals(ExtinctionDanger.BLACKRHINO_DANGER_LEVEL, br.whatDangerLevel());
+        assertEquals(Reptile.REPTILE_SOUND, tu.sound());
     }
 
     @Test @DisplayName("Test of BlackRhino inheritancePath()")
     void testInheritancePath() {
-        assertEquals("BlackRhino < Herbivorous < Mammal < Specimen", br.inheritancePath());
+        assertEquals("Turtle < Reptile < Specimen", tu.inheritancePath());
     }
 }

@@ -11,7 +11,6 @@ public class WildDog extends Carnivorous implements ExtinctionDanger {
     // Attributes
     public static final String WILDDOG_SOUND = "Grrrrr wooof wooof";
     public static final String WILDDOG_WALK = "Light walk";
-    // TODO Walk Mammal
 
     // Constructors
     /**
@@ -33,16 +32,13 @@ public class WildDog extends Carnivorous implements ExtinctionDanger {
     @Override public String sound() {
         return WILDDOG_SOUND;
     }
-    /*
-    **
-     *
+    /**
      * Returns the walk of WildDog specimens.
      * @return walk of WildDog specimens.
-     *
+     */
     @Override public String walk() {
         return WILDDOG_WALK;
     }
-    */
     /**
      * Returns the danger level of WildDog specimens.
      * @return walk of WildDog specimens.

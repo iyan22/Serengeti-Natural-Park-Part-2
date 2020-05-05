@@ -32,7 +32,7 @@ class BlackRhinoTest {
 
     @Test @DisplayName("Test of BlackRhino walk()")
     void testWalk() {
-        assertEquals(Mammal.MAMMAL_WALK, br.walk());
+        assertEquals(BlackRhino.BLACKRHINO_WALK, br.walk());
     }
 
     @Test @DisplayName("Test of BlackRhino whatDangerLevel()")

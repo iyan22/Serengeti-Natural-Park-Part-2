@@ -20,13 +20,14 @@ public class Snake extends Reptile {
         super(name, initialGPS);
     }
 
-    @Override
-    public String walk() {
-        return null;
-    }
-
     // Methods
-    // TODO Reptile walk?
+    /**
+     * Returns the inheritance path of a Snake.
+     * @return inheritance path of a Snake.
+     */
+    @Override public String inheritancePath() {
+        return "Snake" + " < " + super.inheritancePath();
+    }
 
 
 }

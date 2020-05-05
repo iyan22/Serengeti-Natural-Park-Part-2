@@ -10,8 +10,7 @@ public class Hippopotamus extends Herbivorous {
 
     // Attributes
     public static final String HIPOPOTAMUS_SOUND = "Whinny whinny";
-    // private final String HIPOPOTAMUS_WALK = "Slow walk";
-    // TODO Walk Mammal
+    public static final String HIPOPOTAMUS_WALK = "Slow walk";
 
     // Constructors
     /**
@@ -36,11 +35,10 @@ public class Hippopotamus extends Herbivorous {
     /**
      * Returns the walk of Hipopotamus specimens.
      * @return walk of Hipopotamus specimens.
-     *
+     */
     @Override public String walk() {
         return HIPOPOTAMUS_WALK;
     }
-    */
     /**
      * Returns the inheritance path of a Hippopotamus.
      * @return inheritance path of a Hippopotamus.

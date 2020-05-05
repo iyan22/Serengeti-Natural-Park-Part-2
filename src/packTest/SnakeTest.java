@@ -1,49 +1,37 @@
 package packTest;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import packSpecimenHierarchy.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("Test of BlackRhino class methods")
+@DisplayName("Test of Snake class methods")
 class SnakeTest {
 
-    static BlackRhino br;
+    static Snake sn;
 
     @BeforeAll
     static void setUpBeforeAll() {
-        br = new BlackRhino("BlackRhinoExample" , new GPS(0,0));
+        sn = new Snake("SnakeExample" , new GPS(0,0));
     }
 
-    @Test @DisplayName("Test of BlackRhino getName()")
+    @Test @DisplayName("Test of Snake getName()")
     void testGetName() {
-        assertEquals("BlackRhinoExample", br.getName());
+        assertEquals("SnakeExample", sn.getName());
     }
 
-    @Test @DisplayName("Test of BlackRhino feeding()")
+    @Test @DisplayName("Test of Snake feeding()")
     void testFeeding() {
-        assertEquals(Herbivorous.HERBIVOROUS_FEEDING, br.feeding());
+        assertEquals(Reptile.REPTILE_FEEDING, sn.feeding());
     }
 
-    @Test @DisplayName("Test of BlackRhino sound()")
+    @Test @DisplayName("Test of Snake sound()")
     void testSound() {
-        assertEquals(BlackRhino.BLACKRHINO_SOUND, br.sound());
+        assertEquals(Reptile.REPTILE_SOUND, sn.sound());
     }
 
-    @Test @DisplayName("Test of BlackRhino walk()")
-    void testWalk() {
-        assertEquals(Mammal.MAMMAL_WALK, br.walk());
-    }
-
-    @Test @DisplayName("Test of BlackRhino whatDangerLevel()")
-    void whatDangerLevel() {
-        assertEquals(ExtinctionDanger.BLACKRHINO_DANGER_LEVEL, br.whatDangerLevel());
-    }
-
-    @Test @DisplayName("Test of BlackRhino inheritancePath()")
+    @Test @DisplayName("Test of Snake inheritancePath()")
     void testInheritancePath() {
-        assertEquals("BlackRhino < Herbivorous < Mammal < Specimen", br.inheritancePath());
+        assertEquals("Snake < Reptile < Specimen", sn.inheritancePath());
     }
 }

@@ -8,10 +8,6 @@ package packSpecimenHierarchy;
  */
 public class Turtle extends Reptile {
 
-    // Attributes
-    private final String TURTLE_SOUND = "Aiggghhh Aiggghh";
-    private final String TURTLE_WALK = "Slow walk";
-
     // Constructors
     /**
      * This constructor, creates a Turtle object with the given attributes/values.
@@ -26,18 +22,11 @@ public class Turtle extends Reptile {
 
     // Methods
     /**
-     * Returns the sound of Turtle specimens.
-     * @return sound of Turtle specimens.
+     * Returns the inheritance path of a Turtle.
+     * @return inheritance path of a Turtle.
      */
-    @Override public String sound() {
-        return TURTLE_SOUND;
-    }
-    /**
-     * Returns the walk of Turtle specimens.
-     * @return walk of Turtle specimens.
-     */
-    @Override public String walk() {
-        return TURTLE_WALK;
+    @Override public String inheritancePath() {
+        return "Turtle" + " < " + super.inheritancePath();
     }
 
 }

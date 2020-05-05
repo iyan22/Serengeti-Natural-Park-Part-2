@@ -34,7 +34,7 @@ class HipopotamusTest {
 
     @Test @DisplayName("Test of Hippopotamus walk()")
     void testWalk() {
-        assertEquals(Mammal.MAMMAL_WALK, hi.walk());
+        assertEquals(Hippopotamus.HIPOPOTAMUS_WALK, hi.walk());
     }
 
     @Test @DisplayName("Test of Hippopotamus inheritancePath()")

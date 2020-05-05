@@ -9,8 +9,8 @@ package packSpecimenHierarchy;
 public abstract class Reptile extends Specimen {
 
     // Attributes
-    private final String REPTILE_FEEDING = "Little animals and insects";
-    private final String REPTILE_SOUND = "Sssssiiigghh sssiiiighh";
+    public static final String REPTILE_FEEDING = "Little animals and insects";
+    public static final String REPTILE_SOUND = "Sssssiiigghh sssiiiighh";
 
     // Constructors
     /**

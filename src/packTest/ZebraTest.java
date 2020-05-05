@@ -11,36 +11,36 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Test of Zebra class methods")
 class ZebraTest {
 
-    static Zebra z;
+    static Zebra ze;
 
     @BeforeAll
     static void setUpBeforeAll() {
-        z = new Zebra("ZebraExample" , new GPS(0,0));
+        ze = new Zebra("ZebraExample" , new GPS(0,0));
     }
 
     @Test @DisplayName("Test of Zebra getName()")
     void testGetName() {
-        assertEquals("ZebraExample", z.getName());
+        assertEquals("ZebraExample", ze.getName());
     }
 
     @Test @DisplayName("Test of Zebra feeding()")
     void testFeeding() {
-        Assertions.assertEquals(Herbivorous.HERBIVOROUS_FEEDING, z.feeding());
+        Assertions.assertEquals(Herbivorous.HERBIVOROUS_FEEDING, ze.feeding());
     }
 
     @Test @DisplayName("Test of Zebra sound()")
     void testSound() {
-        assertEquals(Zebra.ZEBRA_SOUND, z.sound());
+        assertEquals(Zebra.ZEBRA_SOUND, ze.sound());
     }
 
     @Test @DisplayName("Test of Zebra walk()")
     void testWalk() {
-        Assertions.assertEquals(Mammal.MAMMAL_WALK, z.walk());
+        Assertions.assertEquals(Zebra.ZEBRA_WALK, ze.walk());
     }
 
     @Test @DisplayName("Test of Zebra inheritancePath()")
     void testInheritancePath() {
-        assertEquals("Zebra < Herbivorous < Mammal < Specimen", z.inheritancePath());
+        assertEquals("Zebra < Herbivorous < Mammal < Specimen", ze.inheritancePath());
     }
 
 }

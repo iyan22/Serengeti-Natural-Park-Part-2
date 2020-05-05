@@ -32,7 +32,7 @@ class WildDogTest {
 
     @Test @DisplayName("Test of WildDog walk()")
     void testWalk() {
-        assertEquals(Mammal.MAMMAL_WALK, wd.walk());
+        assertEquals(WildDog.WILDDOG_WALK, wd.walk());
     }
 
     @Test @DisplayName("Test of WildDog whatDangerLevel()")

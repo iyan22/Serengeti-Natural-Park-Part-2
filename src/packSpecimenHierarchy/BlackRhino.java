@@ -10,7 +10,7 @@ public class BlackRhino extends Herbivorous implements ExtinctionDanger {
 
     // Attributes
     public static final String BLACKRHINO_SOUND = "Whinny whinny";
-    // TODO Walk Mammal
+    public static final String BLACKRHINO_WALK = "Slow walk";
 
     // Constructors
     /**
@@ -31,6 +31,13 @@ public class BlackRhino extends Herbivorous implements ExtinctionDanger {
      */
     @Override public String sound() {
         return BLACKRHINO_SOUND;
+    }
+    /**
+     * Returns the walk of BlackRhino specimens.
+     * @return walk of BlackRhino specimens.
+     */
+    @Override public String walk() {
+        return BLACKRHINO_WALK;
     }
     /**
      * Returns the danger level of BlackRhino specimens.
