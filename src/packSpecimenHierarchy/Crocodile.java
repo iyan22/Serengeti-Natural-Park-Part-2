@@ -9,8 +9,9 @@ package packSpecimenHierarchy;
 public class Crocodile extends Reptile implements ExtinctionDanger {
 
     // Attributes
-    public static final String CROCODILE_FEEDING = "Big animals";
-    public static final String CROCODILE_SOUND = "Gggrrroooinngg ggrrunngg";
+    private static final String CROCODILE_FEEDING = "Big animals";
+    private static final String CROCODILE_SOUND = "Gggrrroooinngg ggrrunngg";
+    private static final double CROCODILE_DANGER_LEVEL = 0.5;
 
     // Constructors
     /**
@@ -22,6 +23,29 @@ public class Crocodile extends Reptile implements ExtinctionDanger {
      */
     public Crocodile(String name, GPS initialGPS) {
         super(name, initialGPS);
+    }
+
+    // Getters
+    /**
+     * Returns the value of the constant defined for feeding of Crocodile specimens.
+     * @return the value of the constant defined for feeding of Crocodile specimens.
+     */
+    public static String getCrocodileFeeding() {
+        return CROCODILE_FEEDING;
+    }
+    /**
+     * Returns the value of the constant defined for sound of Crocodile specimens.
+     * @return the value of the constant defined for sound of Crocodile specimens.
+     */
+    public static String getCrocodileSound() {
+        return CROCODILE_SOUND;
+    }
+    /**
+     * Returns the value of the constant defined for danger level of Crocodile specimens.
+     * @return the value of the constant defined for danger level of Crocodile specimens.
+     */
+    public static double getCrocodileDangerLevel() {
+        return CROCODILE_DANGER_LEVEL;
     }
 
     // Methods
@@ -53,4 +77,5 @@ public class Crocodile extends Reptile implements ExtinctionDanger {
     @Override public String inheritancePath() {
         return "Crocodile" + " < " + super.inheritancePath();
     }
+
 }

@@ -24,12 +24,12 @@ class TurtleTest {
 
     @Test @DisplayName("Test of Turtle feeding()")
     void testFeeding() {
-        assertEquals(Reptile.REPTILE_FEEDING, tu.feeding());
+        assertEquals(Reptile.getReptileFeeding(), tu.feeding());
     }
 
     @Test @DisplayName("Test of Turtle sound()")
     void testSound() {
-        assertEquals(Reptile.REPTILE_SOUND, tu.sound());
+        assertEquals(Reptile.getReptileSound(), tu.sound());
     }
 
     @Test @DisplayName("Test of BlackRhino inheritancePath()")

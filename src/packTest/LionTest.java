@@ -20,19 +20,21 @@ class LionTest {
         assertEquals("LionExample", li.getName());
     }
 
+    // TODO ¿Que sería mas correcto? Carnivorous.getCarnivorousFeeding() o Lion.getCarnivorousFeeding()
+
     @Test @DisplayName("Test of Lion feeding()")
     void testFeeding() {
-        assertEquals(Carnivorous.CARNIVOROUS_FEEDING, li.feeding());
+        assertEquals(Carnivorous.getCarnivorousFeeding(), li.feeding());
     }
 
     @Test @DisplayName("Test of Lion sound()")
     void testSound() {
-        assertEquals(Feline.FELINE_SOUND, li.sound());
+        assertEquals(Feline.getFelineSound(), li.sound());
     }
 
     @Test @DisplayName("Test of Lion walk()")
     void testWalk() {
-        assertEquals(Feline.FELINE_WALK, li.walk());
+        assertEquals(Feline.getFelineWalk(), li.walk());
     }
 
     @Test @DisplayName("Test of Lion inheritancePath()")

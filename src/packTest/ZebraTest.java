@@ -25,17 +25,17 @@ class ZebraTest {
 
     @Test @DisplayName("Test of Zebra feeding()")
     void testFeeding() {
-        Assertions.assertEquals(Herbivorous.HERBIVOROUS_FEEDING, ze.feeding());
+        Assertions.assertEquals(Herbivorous.getHerbivorousFeeding(), ze.feeding());
     }
 
     @Test @DisplayName("Test of Zebra sound()")
     void testSound() {
-        assertEquals(Zebra.ZEBRA_SOUND, ze.sound());
+        assertEquals(Zebra.getZebraSound(), ze.sound());
     }
 
     @Test @DisplayName("Test of Zebra walk()")
     void testWalk() {
-        Assertions.assertEquals(Zebra.ZEBRA_WALK, ze.walk());
+        Assertions.assertEquals(Zebra.getZebraWalk(), ze.walk());
     }
 
     @Test @DisplayName("Test of Zebra inheritancePath()")

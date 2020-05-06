@@ -22,12 +22,12 @@ class SnakeTest {
 
     @Test @DisplayName("Test of Snake feeding()")
     void testFeeding() {
-        assertEquals(Reptile.REPTILE_FEEDING, sn.feeding());
+        assertEquals(Reptile.getReptileFeeding(), sn.feeding());
     }
 
     @Test @DisplayName("Test of Snake sound()")
     void testSound() {
-        assertEquals(Reptile.REPTILE_SOUND, sn.sound());
+        assertEquals(Reptile.getReptileSound(), sn.sound());
     }
 
     @Test @DisplayName("Test of Snake inheritancePath()")

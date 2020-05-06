@@ -1,9 +1,15 @@
 package packSpecimenHierarchy;
 
+/**
+ * Represents a Carnivorous object on the Serengeti Park.
+ *
+ * @version Project - Part 2
+ * @author Iyán Álvarez
+ */
 public abstract class Carnivorous extends Mammal {
 
     // Attributes
-    public static final String CARNIVOROUS_FEEDING = "Other animals";
+    private static final String CARNIVOROUS_FEEDING = "Other animals";
 
     // Constructors
     /**
@@ -15,6 +21,15 @@ public abstract class Carnivorous extends Mammal {
      */
     public Carnivorous(String name, GPS initialGPS) {
         super(name, initialGPS);
+    }
+
+    // Getters
+    /**
+     * Returns the value of the constant defined for feeding of Carnivorous specimens.
+     * @return the value of the constant defined for feeding of Carnivorous specimens.
+     */
+    public static String getCarnivorousFeeding() {
+        return CARNIVOROUS_FEEDING;
     }
 
     // Methods
@@ -30,6 +45,7 @@ public abstract class Carnivorous extends Mammal {
      * @return inheritance path of a Carnivorous.
      */
     @Override public String inheritancePath() {
-        return "Carnivorous" + " < " + super.inheritancePath();
+        return "Carnivorous < " + super.inheritancePath();
     }
+
 }

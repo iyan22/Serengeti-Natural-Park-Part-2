@@ -9,8 +9,8 @@ package packSpecimenHierarchy;
 public abstract class Reptile extends Specimen {
 
     // Attributes
-    public static final String REPTILE_FEEDING = "Little animals and insects";
-    public static final String REPTILE_SOUND = "Sssssiiigghh sssiiiighh";
+    private static final String REPTILE_FEEDING = "Little animals and insects";
+    private static final String REPTILE_SOUND = "Sssssiiigghh sssiiiighh";
 
     // Constructors
     /**
@@ -22,6 +22,22 @@ public abstract class Reptile extends Specimen {
      */
     public Reptile(String name, GPS initialGPS) {
         super(name, initialGPS);
+    }
+
+    // Getters
+    /**
+     * Returns the value of the constant defined for feeding of Reptile specimens.
+     * @return the value of the constant defined for feeding of Reptile specimens.
+     */
+    public static String getReptileFeeding() {
+        return REPTILE_FEEDING;
+    }
+    /**
+     * Returns the value of the constant defined for sound of Reptile specimens.
+     * @return the value of the constant defined for sound of Reptile specimens.
+     */
+    public static String getReptileSound() {
+        return REPTILE_SOUND;
     }
 
     // Methods

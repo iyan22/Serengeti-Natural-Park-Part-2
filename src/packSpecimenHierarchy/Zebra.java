@@ -9,12 +9,30 @@ package packSpecimenHierarchy;
 public class Zebra extends Herbivorous {
 
     // Attributes
-    public static final String ZEBRA_SOUND = "Hiiiihiiiii hiiiihiii";
-    public static final String ZEBRA_WALK = "Light walk";
+    private static final String ZEBRA_SOUND = "Hiiiihiiiii hiiiihiii";
+    private static final String ZEBRA_WALK = "Light walk";
 
     // Constructors
     public Zebra(String name, GPS initialGPS) {
         super(name, initialGPS);
+    }
+
+    // TODO Preguntar implementacion walk de Zebra y WildDog en Mammal.
+
+    // Getters
+    /**
+     * Returns the value of the constant defined for sound of Zebra specimens.
+     * @return the value of the constant defined for sound of Zebra specimens.
+     */
+    public static String getZebraSound() {
+        return ZEBRA_SOUND;
+    }
+    /**
+     * Returns the value of the constant defined for walk of Zebra specimens.
+     * @return the value of the constant defined for walk of Zebra specimens.
+     */
+    public static String getZebraWalk() {
+        return ZEBRA_WALK;
     }
 
     // Methods
@@ -37,7 +55,7 @@ public class Zebra extends Herbivorous {
      * @return inheritance path of a Zebra.
      */
     @Override public String inheritancePath() {
-        return "Zebra" + " < " + super.inheritancePath();
+        return "Zebra < " + super.inheritancePath();
     }
 
 }

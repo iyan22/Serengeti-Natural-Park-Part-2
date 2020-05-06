@@ -9,8 +9,8 @@ package packSpecimenHierarchy;
 public abstract class Feline extends Carnivorous {
 
     // Attributes
-    public static final String FELINE_SOUND = "Roaaarr roaarrr";
-    public static final String FELINE_WALK = "Stealthy walk";
+    private static final String FELINE_SOUND = "Roaaarr roaarrr";
+    private static final String FELINE_WALK = "Stealthy walk";
 
     // Constructors
     /**
@@ -22,6 +22,22 @@ public abstract class Feline extends Carnivorous {
      */
     public Feline(String name, GPS initialGPS) {
         super(name, initialGPS);
+    }
+
+    // Getters
+    /**
+     * Returns the value of the constant defined for sound of Feline specimens.
+     * @return the value of the constant defined for sound of Feline specimens.
+     */
+    public static String getFelineSound() {
+        return FELINE_SOUND;
+    }
+    /**
+     * Returns the value of the constant defined for walk of Feline specimens.
+     * @return the value of the constant defined for walk of Feline specimens.
+     */
+    public static String getFelineWalk() {
+        return FELINE_WALK;
     }
 
     // Methods

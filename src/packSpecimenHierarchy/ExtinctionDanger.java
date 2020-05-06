@@ -1,11 +1,12 @@
 package packSpecimenHierarchy;
 
+/**
+ * Represents ExtinctionDanger on the Serengeti Park.
+ *
+ * @version Project - Part 2
+ * @author Iyán Álvarez
+ */
 public interface ExtinctionDanger {
-
-    // Constants
-    public static final double BLACKRHINO_DANGER_LEVEL = 2.2;
-    public static final double WILDDOG_DANGER_LEVEL = 1.7;
-    public static final double CROCODILE_DANGER_LEVEL = 0.5;
 
     // Methods
     /**

@@ -9,7 +9,7 @@ package packSpecimenHierarchy;
 public abstract class Herbivorous extends Mammal {
 
     // Attributes
-    public static final String HERBIVOROUS_FEEDING = "Plants, grasses and herbs";
+    private static final String HERBIVOROUS_FEEDING = "Plants, grasses and herbs";
 
     // Constructors
     /**
@@ -21,6 +21,15 @@ public abstract class Herbivorous extends Mammal {
      */
     public Herbivorous(String name, GPS initialGPS) {
         super(name, initialGPS);
+    }
+
+    // Getters
+    /**
+     * Returns the value of the constant defined for feeding of Herbivorous specimens.
+     * @return the value of the constant defined for feeding of Herbivorous specimens.
+     */
+    public static String getHerbivorousFeeding() {
+        return HERBIVOROUS_FEEDING;
     }
 
     // Methods

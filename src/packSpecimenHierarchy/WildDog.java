@@ -9,8 +9,9 @@ package packSpecimenHierarchy;
 public class WildDog extends Carnivorous implements ExtinctionDanger {
 
     // Attributes
-    public static final String WILDDOG_SOUND = "Grrrrr wooof wooof";
-    public static final String WILDDOG_WALK = "Light walk";
+    private static final String WILDDOG_SOUND = "Grrrrr wooof wooof";
+    private static final String WILDDOG_WALK = "Light walk";
+    private static final double WILDDOG_DANGER_LEVEL = 1.7;
 
     // Constructors
     /**
@@ -22,6 +23,31 @@ public class WildDog extends Carnivorous implements ExtinctionDanger {
      */
     public WildDog(String name, GPS initialGPS) {
         super(name, initialGPS);
+    }
+
+    // TODO Preguntar implementacion walk de Zebra y WildDog en Mammal.
+
+    // Getters
+    /**
+     * Returns the value of the constant defined for sound of WildDog specimens.
+     * @return the value of the constant defined for sound of WildDog specimens.
+     */
+    public static String getWildDogSound() {
+        return WILDDOG_SOUND;
+    }
+    /**
+     * Returns the value of the constant defined for walk of WildDog specimens.
+     * @return the value of the constant defined for walk of WildDog specimens.
+     */
+    public static String getWildDogWalk() {
+        return WILDDOG_WALK;
+    }
+    /**
+     * Returns the value of the constant defined for danger level of WildDog specimens.
+     * @return the value of the constant defined for danger level of WildDog specimens.
+     */
+    public static double getWildDogDangerLevel() {
+        return WILDDOG_DANGER_LEVEL;
     }
 
     // Methods
@@ -41,7 +67,7 @@ public class WildDog extends Carnivorous implements ExtinctionDanger {
     }
     /**
      * Returns the danger level of WildDog specimens.
-     * @return walk of WildDog specimens.
+     * @return the danger level of WildDog specimens.
      */
     @Override public double whatDangerLevel() {
         return WILDDOG_DANGER_LEVEL;
@@ -51,7 +77,7 @@ public class WildDog extends Carnivorous implements ExtinctionDanger {
      * @return inheritance path of a WildDog.
      */
     @Override public String inheritancePath() {
-        return "WildDog" + " < " + super.inheritancePath();
+        return "WildDog < " + super.inheritancePath();
     }
 
 }

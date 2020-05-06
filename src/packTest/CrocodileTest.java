@@ -24,17 +24,17 @@ class CrocodileTest {
 
     @Test @DisplayName("Test of Crocodile feeding()")
     void testFeeding() {
-        assertEquals(Crocodile.CROCODILE_FEEDING, cr.feeding());
+        assertEquals(Crocodile.getCrocodileFeeding(), cr.feeding());
     }
 
     @Test @DisplayName("Test of Crocodile sound()")
     void testSound() {
-        assertEquals(Crocodile.CROCODILE_SOUND, cr.sound());
+        assertEquals(Crocodile.getCrocodileSound(), cr.sound());
     }
 
     @Test @DisplayName("Test of Crocodile whatDangerLevel()")
     void whatDangerLevel() {
-        assertEquals(ExtinctionDanger.CROCODILE_DANGER_LEVEL, cr.whatDangerLevel());
+        assertEquals(Crocodile.getCrocodileDangerLevel(), cr.whatDangerLevel());
     }
 
     @Test @DisplayName("Test of Crocodile inheritancePath()")

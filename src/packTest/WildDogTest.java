@@ -22,22 +22,22 @@ class WildDogTest {
 
     @Test @DisplayName("Test of WildDog feeding()")
     void testFeeding() {
-        assertEquals(Carnivorous.CARNIVOROUS_FEEDING, wd.feeding());
+        assertEquals(Carnivorous.getCarnivorousFeeding(), wd.feeding());
     }
 
     @Test @DisplayName("Test of WildDog sound()")
     void testSound() {
-        assertEquals(WildDog.WILDDOG_SOUND, wd.sound());
+        assertEquals(WildDog.getWildDogSound(), wd.sound());
     }
 
     @Test @DisplayName("Test of WildDog walk()")
     void testWalk() {
-        assertEquals(WildDog.WILDDOG_WALK, wd.walk());
+        assertEquals(WildDog.getWildDogWalk(), wd.walk());
     }
 
     @Test @DisplayName("Test of WildDog whatDangerLevel()")
     void whatDangerLevel() {
-        assertEquals(ExtinctionDanger.WILDDOG_DANGER_LEVEL, wd.whatDangerLevel());
+        assertEquals(WildDog.getWildDogDangerLevel(), wd.whatDangerLevel());
     }
 
     @Test @DisplayName("Test of WildDog inheritancePath()")

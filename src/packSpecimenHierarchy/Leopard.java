@@ -28,4 +28,5 @@ public class Leopard extends Feline {
     @Override public String inheritancePath() {
         return "Leopard" + " < " + super.inheritancePath();
     }
+
 }

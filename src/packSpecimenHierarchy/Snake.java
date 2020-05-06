@@ -29,5 +29,4 @@ public class Snake extends Reptile {
         return "Snake" + " < " + super.inheritancePath();
     }
 
-
 }
