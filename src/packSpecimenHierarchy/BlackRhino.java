@@ -9,8 +9,6 @@ package packSpecimenHierarchy;
 public class BlackRhino extends Herbivorous implements ExtinctionDanger {
 
     // Attributes
-    private static final String BLACKRHINO_SOUND = "Whinny whinny";
-    private static final String BLACKRHINO_WALK = "Slow walk";
     private static final double BLACKRHINO_DANGER_LEVEL = 2.2;
 
     // Constructors
@@ -25,23 +23,7 @@ public class BlackRhino extends Herbivorous implements ExtinctionDanger {
         super(name, initialGPS);
     }
 
-    // TODO Preguntar implementacion walk de BlackRhino y Hippopotamus en Mammal.
-
     // Getters
-    /**
-     * Returns the value of the constant defined for sound of BlackRhino specimens.
-     * @return the value of the constant defined for sound of BlackRhino specimens.
-     */
-    public static String getBlackRhinoSound() {
-        return BLACKRHINO_SOUND;
-    }
-    /**
-     * Returns the value of the constant defined for walk of BlackRhino specimens.
-     * @return the value of the constant defined for walk of BlackRhino specimens.
-     */
-    public static String getBlackRhinoWalk() {
-        return BLACKRHINO_WALK;
-    }
     /**
      * Returns the value of the constant defined for danger level of BlackRhino specimens.
      * @return the value of the constant defined for danger level of BlackRhino specimens.
@@ -51,20 +33,6 @@ public class BlackRhino extends Herbivorous implements ExtinctionDanger {
     }
 
     // Methods
-    /**
-     * Returns the sound of BlackRhino specimens.
-     * @return sound of BlackRhino specimens.
-     */
-    @Override public String sound() {
-        return BLACKRHINO_SOUND;
-    }
-    /**
-     * Returns the walk of BlackRhino specimens.
-     * @return walk of BlackRhino specimens.
-     */
-    @Override public String walk() {
-        return BLACKRHINO_WALK;
-    }
     /**
      * Returns the danger level of BlackRhino specimens.
      * @return the danger level of BlackRhino specimens.

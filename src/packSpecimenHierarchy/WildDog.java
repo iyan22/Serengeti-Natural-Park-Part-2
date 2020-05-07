@@ -9,7 +9,7 @@ package packSpecimenHierarchy;
 public class WildDog extends Carnivorous implements ExtinctionDanger {
 
     // Attributes
-    private static final String WILDDOG_SOUND = "Grrrrr wooof wooof";
+    private static final String WILDDOG_SOUND = "Aiiiiiiii aii aiii";
     private static final String WILDDOG_WALK = "Light walk";
     private static final double WILDDOG_DANGER_LEVEL = 1.7;
 

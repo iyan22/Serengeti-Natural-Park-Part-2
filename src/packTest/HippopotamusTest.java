@@ -7,7 +7,8 @@ import packSpecimenHierarchy.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class HipopotamusTest {
+@DisplayName("Test of Hippopotamus class methods")
+class HippopotamusTest {
 
     static Hippopotamus hi;
 
@@ -16,25 +17,24 @@ class HipopotamusTest {
         hi = new Hippopotamus("HippopotamusExample" , new GPS(0,0));
     }
 
-    @Test
-    @DisplayName("Test of Hippopotamus getName()")
+    @Test @DisplayName("Test of Hippopotamus getName()")
     void testGetName() {
         assertEquals("HippopotamusExample", hi.getName());
     }
 
     @Test @DisplayName("Test of Hippopotamus feeding()")
     void testFeeding() {
-        assertEquals(Herbivorous.getHerbivorousFeeding(), hi.feeding());
+        assertEquals(Hippopotamus.getHerbivorousFeeding(), hi.feeding());
     }
 
     @Test @DisplayName("Test of Hippopotamus sound()")
     void testSound() {
-        assertEquals(Hippopotamus.getHipoppotamusSound(), hi.sound());
+        assertEquals(Hippopotamus.getHerbivorousSound(), hi.sound());
     }
 
     @Test @DisplayName("Test of Hippopotamus walk()")
     void testWalk() {
-        assertEquals(Hippopotamus.getHippopotamusWalk(), hi.walk());
+        assertEquals(Hippopotamus.getHerbivorousWalk(), hi.walk());
     }
 
     @Test @DisplayName("Test of Hippopotamus inheritancePath()")

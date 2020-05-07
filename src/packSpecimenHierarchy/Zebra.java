@@ -17,8 +17,6 @@ public class Zebra extends Herbivorous {
         super(name, initialGPS);
     }
 
-    // TODO Preguntar implementacion walk de Zebra y WildDog en Mammal.
-
     // Getters
     /**
      * Returns the value of the constant defined for sound of Zebra specimens.
