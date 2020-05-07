@@ -25,8 +25,6 @@ public class WildDog extends Carnivorous implements ExtinctionDanger {
         super(name, initialGPS);
     }
 
-    // TODO Preguntar implementacion walk de Zebra y WildDog en Mammal.
-
     // Getters
     /**
      * Returns the value of the constant defined for sound of WildDog specimens.
