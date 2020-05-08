@@ -62,5 +62,12 @@ public abstract class Feline extends Carnivorous {
     @Override public String inheritancePath() {
         return "Feline" + " < " + super.inheritancePath();
     }
+    /**
+     * Returns the basic information of the Feline.
+     * @return the basic information of the Feline.
+     */
+    @Override public String toString() {
+        return "Feline: " + this.getName();
+    }
 
 }

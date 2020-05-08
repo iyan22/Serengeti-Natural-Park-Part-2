@@ -77,5 +77,11 @@ public class WildDog extends Carnivorous implements ExtinctionDanger {
     @Override public String inheritancePath() {
         return "WildDog < " + super.inheritancePath();
     }
-
+    /**
+     * Returns the basic information of the WildDog.
+     * @return the basic information of the WildDog.
+     */
+    @Override public String toString() {
+        return "WildDog: " + this.getName();
+    }
 }

@@ -77,5 +77,12 @@ public class Crocodile extends Reptile implements ExtinctionDanger {
     @Override public String inheritancePath() {
         return "Crocodile" + " < " + super.inheritancePath();
     }
+    /**
+     * Returns the basic information of the Crocodile.
+     * @return the basic information of the Crocodile.
+     */
+    @Override public String toString() {
+        return "Crocodile: " + this.getName();
+    }
 
 }

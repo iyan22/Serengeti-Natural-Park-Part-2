@@ -15,17 +15,35 @@ public class SerengetiProof {
      *                      in order.
      */
     public static void whoIsInSerengeti(ArrayList<Specimen> specimenList) {
-        System.out.println("Specimens that are in the Serengeti Natural Park: ");
-        for (Specimen s: specimenList) {
-            System.out.println(s.getClass().getSimpleName());
-
-            System.out.println(" - Feeding: " + s.feeding());
-            System.out.println(" - Sound: "   + s.feeding());
-            if (s instanceof Mammal) {
-                System.out.println(" - Walk: " + ((Mammal) s).walk());
+        ArrayList<String> name      = new ArrayList<>();
+        ArrayList<Integer> amount   = new ArrayList<>();
+        ArrayList<Specimen> example = new ArrayList<>();
+        for (Specimen s: specimenList) {                        // Polymorphism
+            String className = s.getClass().getSimpleName();
+            if(name.contains(className)) {
+                int index = name.indexOf(className);
+                int newamount = amount.get(index)+1;
+                amount.add(index, newamount);
             }
-            if (s instanceof ExtinctionDanger) {
-                System.out.println(" - Danger level: " + ((ExtinctionDanger) s).whatDangerLevel());
+            else {
+                name.add(className);
+                amount.add(1);
+                example.add(s);
+            }
+        }
+        System.out.println("Specimens that are in the Serengeti Natural Park: ");
+        for (String n: name) {
+            int index = name.indexOf(n);
+            Specimen ex = example.get(index);
+            System.out.println(n);
+            System.out.println(" - Amount: " + amount.get(index));
+            System.out.println(" - Feeding: " + ex.feeding());          // Dispatching
+            System.out.println(" - Sound: " + ex.sound());              // Dispatching
+            if (ex instanceof Mammal) {
+                System.out.println(" - Walk: " + ((Mammal) ex).walk()); // Dispatching
+            }
+            if (ex instanceof ExtinctionDanger) {
+                System.out.println(" - Danger level: " + ((ExtinctionDanger) ex).whatDangerLevel()); // Dispatching
             }
         }
     }
@@ -42,8 +60,8 @@ public class SerengetiProof {
         int endangered = 0;
         System.out.println("Specimens in danger of extinction equal to or greater than level " + dangerLevel + ": ");
         for (Specimen s: specimenList) {
-            if (s instanceof ExtinctionDanger && dangerLevel <= ((ExtinctionDanger) s).whatDangerLevel()) {
-                System.out.println(s.getName() + " (" + s.getClass().getSimpleName() + ")");
+            if (s instanceof ExtinctionDanger && dangerLevel <= ((ExtinctionDanger) s).whatDangerLevel()) { // Polymorphism
+                System.out.println(" - " +s.toString());    // Dispatching
                 endangered++;
             }
         }
@@ -59,10 +77,14 @@ public class SerengetiProof {
         return mammal instanceof ExtinctionDanger;
     }
 
-
+    // Main
+    /**
+     * Simulation of the methods defined at SerengetiProof class.
+     * @param args  Not used.
+     */
     public static void main(String[] args) {
 
-        ArrayList<Specimen> sp = new ArrayList<Specimen>();
+        ArrayList<Specimen> sp = new ArrayList<>();
 
         GPS gps = new GPS(0,0);
 
@@ -104,34 +126,55 @@ public class SerengetiProof {
         sp.add(wd2);
         sp.add(ze2);
 
+        whoIsInSerengeti(sp);
+        System.out.println();
+
         double dangerLevel = 1.0;
-        int endangered = SerengetiProof.howManyEndangeredSpecimen(sp, dangerLevel);
+        int endangered = howManyEndangeredSpecimen(sp, dangerLevel);
         System.out.println("There are " + endangered + " specimens with equal or or higher level of extinction than " + dangerLevel + ".");
         System.out.println();
 
-        System.out.println("The Mammal (ZebraExample1) is it in danger of extinction? " + SerengetiProof.checkExtinctionDanger(ze1));
-        System.out.println("The Mammal (BlackRhinoExample1) is it in danger of extinction? " + SerengetiProof.checkExtinctionDanger(br1));
-        System.out.println("The Mammal (WildDogExample2) is it in danger of extinction? " + SerengetiProof.checkExtinctionDanger(wd2));
-        System.out.println("The Mammal (HippopotamusExample2) is it in danger of extinction? " + SerengetiProof.checkExtinctionDanger(hi2));
-        System.out.println();
+        Zebra z = ze1;
+        Mammal m = wd1;
+        Specimen s = wd2;
+        Object o = br2;
+        Reptile r = sn2;
 
-        
+        // Correct
+        // We can do this operation without any problem, the class Zebra is a subclass of Mammal, the input type/class.
+        System.out.println("The variable z has Zebra as static type and " + z.getClass().getSimpleName()+" as dynamic type. " +
+                           "Is it in danger?? "+ checkExtinctionDanger(z) + "\n");
 
+        // Correct
+        // We can do this operation without any problem, the class WildDog is a subclass of Mammal the input type/class.
+        // All the subclasses that could be assigned to Mammal with or without casting, will work without problems.
+        System.out.println("The variable m has Mammal as static type and " + m.getClass().getSimpleName()+" as dynamic type. " +
+                           "Is it in danger?? "+ checkExtinctionDanger(m) + "\n");
 
+        // Runtime error
+        // If the variable assigned to Specimen s is Mammal or one of them subclasses will work without any problem (doing casting),
+        // otherwise we can not do a casting to Mammal and a exception will be thrown causing a runtime error.
+        try {
+            System.out.println("The variable s has Specimen as static type and " + s.getClass().getSimpleName() + " as dynamic type. " +
+                               "Is it in danger?? " + checkExtinctionDanger((Mammal) s));
+        } catch (ClassCastException e) {
+            System.out.println("The variable s has Specimen as static type and " + s.getClass().getSimpleName() + " as dynamic type.");
+            System.out.println("Runtime error: You can't cast that dynamic type into Mammal. \n");
+        }
 
+        // Correct, explicit conversion (casting)
+        // If the variable assigned to Object o is Mammal or one of them subclasses will work without any problem (doing casting),
+        // otherwise we can not do a casting to Mammal and a exception will be thrown causing a runtime error.
+        System.out.println("The variable o has Object as static type and " + o.getClass().getSimpleName()+" as dynamic type. " +
+                           "Is it in danger?? "+ checkExtinctionDanger((Mammal) o) + "\n");
 
-
-
-
-
-
-
-
-
+        // Compilation error
+        // If the class is not on the branch of Mammal, in this case Reptile will not compile.
+        System.out.println("The variable r has Reptile as static type and " + r.getClass().getSimpleName()+" as dynamic type. " );
+                           // "Is it in danger?? " checkExtinctionDanger(r));
+        System.out.println("Compilation error: You can't cast that dynamic type into Mammal. \n");
 
     }
-
-
 
 }
 

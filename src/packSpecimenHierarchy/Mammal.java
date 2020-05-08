@@ -33,5 +33,12 @@ public abstract class Mammal extends Specimen {
     @Override public String inheritancePath() {
         return "Mammal" + " < " + super.inheritancePath();
     }
+    /**
+     * Returns the basic information of the Mammal.
+     * @return the basic information of the Mammal.
+     */
+    @Override public String toString() {
+        return "Mammal: " + this.getName();
+    }
 
 }

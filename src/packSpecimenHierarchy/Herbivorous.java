@@ -77,6 +77,12 @@ public abstract class Herbivorous extends Mammal {
     @Override public String inheritancePath() {
         return "Herbivorous" + " < " + super.inheritancePath();
     }
-
+    /**
+     * Returns the basic information of the Herbivorous.
+     * @return the basic information of the Herbivorous.
+     */
+    @Override public String toString() {
+        return "Herbivorous: " + this.getName();
+    }
 
 }

@@ -55,5 +55,12 @@ public class Zebra extends Herbivorous {
     @Override public String inheritancePath() {
         return "Zebra < " + super.inheritancePath();
     }
+    /**
+     * Returns the basic information of the Zebra.
+     * @return the basic information of the Zebra.
+     */
+    @Override public String toString() {
+        return "Zebra: " + this.getName();
+    }
 
 }

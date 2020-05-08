@@ -47,5 +47,12 @@ public abstract class Carnivorous extends Mammal {
     @Override public String inheritancePath() {
         return "Carnivorous < " + super.inheritancePath();
     }
+    /**
+     * Returns the basic information of the Carnivorous.
+     * @return the basic information of the Carnivorous.
+     */
+    @Override public String toString() {
+        return "Carnivorous: " + this.getName();
+    }
 
 }

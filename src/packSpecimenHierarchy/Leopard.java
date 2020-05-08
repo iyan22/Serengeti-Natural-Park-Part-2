@@ -28,5 +28,12 @@ public class Leopard extends Feline {
     @Override public String inheritancePath() {
         return "Leopard" + " < " + super.inheritancePath();
     }
+    /**
+     * Returns the basic information of the Leopard.
+     * @return the basic information of the Leopard.
+     */
+    @Override public String toString() {
+        return "Leopard: " + this.getName();
+    }
 
 }

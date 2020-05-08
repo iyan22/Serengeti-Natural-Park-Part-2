@@ -108,11 +108,11 @@ public abstract class Specimen {
         }
     }
     /**
-     * Returns the basic information of a Specimen object in a String.
-     * @return String with the basic information of a Specimen.
+     * Returns the basic information of the Specimen.
+     * @return the basic information of the Specimen.
      */
     @Override public String toString() {
-        return name + " " + lastLocation().toString();
+        return "Specimen: " + this.getName();
     }
 
 

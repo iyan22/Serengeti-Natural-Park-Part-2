@@ -28,5 +28,12 @@ public class Turtle extends Reptile {
     @Override public String inheritancePath() {
         return "Turtle" + " < " + super.inheritancePath();
     }
+    /**
+     * Returns the basic information of the Turtle.
+     * @return the basic information of the Turtle.
+     */
+    @Override public String toString() {
+        return "Turtle: " + this.getName();
+    }
 
 }

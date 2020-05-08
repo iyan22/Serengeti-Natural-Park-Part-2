@@ -62,4 +62,12 @@ public abstract class Reptile extends Specimen {
     @Override public String inheritancePath() {
         return "Reptile" + " < " + super.inheritancePath();
     }
+    /**
+     * Returns the basic information of the Reptile.
+     * @return the basic information of the Reptile.
+     */
+    @Override public String toString() {
+        return "Reptile: " + this.getName();
+    }
+
 }

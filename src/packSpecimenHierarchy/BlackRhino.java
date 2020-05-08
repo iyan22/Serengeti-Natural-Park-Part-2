@@ -47,5 +47,11 @@ public class BlackRhino extends Herbivorous implements ExtinctionDanger {
     @Override public String inheritancePath() {
         return "BlackRhino < " + super.inheritancePath();
     }
-
+    /**
+     * Returns the basic information of the BlackRhino.
+     * @return the basic information of the BlackRhino.
+     */
+    @Override public String toString() {
+        return "BlackRhino: " + this.getName();
+    }
 }

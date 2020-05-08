@@ -27,5 +27,12 @@ public class Hippopotamus extends Herbivorous {
     @Override public String inheritancePath() {
         return "Hippopotamus < " + super.inheritancePath();
     }
+    /**
+     * Returns the basic information of the Hippopotamus.
+     * @return the basic information of the Hippopotamus.
+     */
+    @Override public String toString() {
+        return "Hippopotamus: " + this.getName();
+    }
 
 }

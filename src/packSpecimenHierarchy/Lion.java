@@ -28,5 +28,12 @@ public class Lion extends Feline {
     @Override public String inheritancePath() {
         return "Lion" + " < " + super.inheritancePath();
     }
+    /**
+     * Returns the basic information of the Lion.
+     * @return the basic information of the Lion.
+     */
+    @Override public String toString() {
+        return "Lion: " + this.getName();
+    }
 
 }
