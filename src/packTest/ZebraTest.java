@@ -25,7 +25,7 @@ class ZebraTest {
 
     @Test @DisplayName("Test of Zebra feeding()")
     void testFeeding() {
-        Assertions.assertEquals(Zebra.getHerbivorousFeeding(), ze.feeding());
+        assertEquals(Herbivorous.getHerbivorousFeeding(), ze.feeding());
     }
 
     @Test @DisplayName("Test of Zebra sound()")

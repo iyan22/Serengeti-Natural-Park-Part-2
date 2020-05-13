@@ -22,7 +22,7 @@ class WildDogTest {
 
     @Test @DisplayName("Test of WildDog feeding()")
     void testFeeding() {
-        assertEquals(WildDog.getCarnivorousFeeding(), wd.feeding());
+        assertEquals(Carnivorous.getCarnivorousFeeding(), wd.feeding());
     }
 
     @Test @DisplayName("Test of WildDog sound()")
@@ -36,7 +36,7 @@ class WildDogTest {
     }
 
     @Test @DisplayName("Test of WildDog whatDangerLevel()")
-    void whatDangerLevel() {
+    void testWhatDangerLevel() {
         assertEquals(WildDog.getWildDogDangerLevel(), wd.whatDangerLevel());
     }
 

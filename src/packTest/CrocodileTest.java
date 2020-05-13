@@ -33,7 +33,7 @@ class CrocodileTest {
     }
 
     @Test @DisplayName("Test of Crocodile whatDangerLevel()")
-    void whatDangerLevel() {
+    void testWhatDangerLevel() {
         assertEquals(Crocodile.getCrocodileDangerLevel(), cr.whatDangerLevel());
     }
 

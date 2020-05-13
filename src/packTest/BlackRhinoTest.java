@@ -22,21 +22,21 @@ class BlackRhinoTest {
 
     @Test @DisplayName("Test of BlackRhino feeding()")
     void testFeeding() {
-        assertEquals(BlackRhino.getHerbivorousFeeding(), br.feeding());
+        assertEquals(Herbivorous.getHerbivorousFeeding(), br.feeding());
     }
 
     @Test @DisplayName("Test of BlackRhino sound()")
     void testSound() {
-        assertEquals(BlackRhino.getHerbivorousSound(), br.sound());
+        assertEquals(Herbivorous.getHerbivorousSound(), br.sound());
     }
 
     @Test @DisplayName("Test of BlackRhino walk()")
     void testWalk() {
-        assertEquals(BlackRhino.getHerbivorousWalk(), br.walk());
+        assertEquals(Herbivorous.getHerbivorousWalk(), br.walk());
     }
 
     @Test @DisplayName("Test of BlackRhino whatDangerLevel()")
-    void whatDangerLevel() {
+    void testWhatDangerLevel() {
         assertEquals(BlackRhino.getBlackRhinoDangerLevel(), br.whatDangerLevel());
     }
 

@@ -24,17 +24,17 @@ class HippopotamusTest {
 
     @Test @DisplayName("Test of Hippopotamus feeding()")
     void testFeeding() {
-        assertEquals(Hippopotamus.getHerbivorousFeeding(), hi.feeding());
+        assertEquals(Herbivorous.getHerbivorousFeeding(), hi.feeding());
     }
 
     @Test @DisplayName("Test of Hippopotamus sound()")
     void testSound() {
-        assertEquals(Hippopotamus.getHerbivorousSound(), hi.sound());
+        assertEquals(Herbivorous.getHerbivorousSound(), hi.sound());
     }
 
     @Test @DisplayName("Test of Hippopotamus walk()")
     void testWalk() {
-        assertEquals(Hippopotamus.getHerbivorousWalk(), hi.walk());
+        assertEquals(Herbivorous.getHerbivorousWalk(), hi.walk());
     }
 
     @Test @DisplayName("Test of Hippopotamus inheritancePath()")

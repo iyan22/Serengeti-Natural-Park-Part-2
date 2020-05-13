@@ -22,17 +22,17 @@ class LeopardTest {
 
     @Test @DisplayName("Test of Leopard feeding()")
     void testFeeding() {
-        assertEquals(Leopard.getCarnivorousFeeding(), le.feeding());
+        assertEquals(Carnivorous.getCarnivorousFeeding(), le.feeding());
     }
 
     @Test @DisplayName("Test of Leopard sound()")
     void testSound() {
-        assertEquals(Leopard.getFelineSound(), le.sound());
+        assertEquals(Feline.getFelineSound(), le.sound());
     }
 
     @Test @DisplayName("Test of Leopard walk()")
     void testWalk() {
-        assertEquals(Leopard.getFelineWalk(), le.walk());
+        assertEquals(Feline.getFelineWalk(), le.walk());
     }
 
     @Test @DisplayName("Test of Leopard inheritancePath()")

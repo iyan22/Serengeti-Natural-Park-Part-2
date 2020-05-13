@@ -18,7 +18,7 @@ public class SerengetiProof {
         ArrayList<String> name      = new ArrayList<>();
         ArrayList<Integer> amount   = new ArrayList<>();
         ArrayList<Specimen> example = new ArrayList<>();
-        for (Specimen s: specimenList) {                        // Polymorphism
+        for (Specimen s: specimenList) {                        // s is a polymorphic variable
             String className = s.getClass().getSimpleName();
             if(name.contains(className)) {
                 int index = name.indexOf(className);
